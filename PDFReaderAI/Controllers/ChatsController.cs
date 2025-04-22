@@ -65,7 +65,10 @@ namespace PDFReaderAI.Controllers
             return NoContent();
         }
         [HttpPost("{id}/interact")]
-        public async Task<IActionResult> InteractWithAI(Guid id, [FromBody] string newPrompt, [FromServices] IChatAIService chatAIService)
+        public async Task<IActionResult> InteractWithAI(
+           Guid id,
+           [FromBody] string newPrompt,
+           [FromServices] IChatAIService chatAIService)
         {
             // Obține chat-ul din baza de date
             var chat = await chatRepository.GetChatByIdAsync(id);
@@ -77,6 +80,16 @@ namespace PDFReaderAI.Controllers
             if (string.IsNullOrEmpty(newPrompt))
             {
                 return BadRequest("The newPrompt field is required.");
+            }
+
+            // Verificăm dacă există un fișier PDF atașat și dacă promptul nu este un text simplu
+            if (chat.FileContent != null && chat.FileContent.Length > 0 && chat.FileMimeType == "application/pdf")
+            {
+                // Construim un prompt personalizat pentru AI doar dacă nu este un text simplu
+                if (string.IsNullOrWhiteSpace(newPrompt) || newPrompt.Equals("Te rog fa rezumatul la PDF-ul atasat", StringComparison.OrdinalIgnoreCase))
+                {
+                    newPrompt = $"Te rog sa imi rezumi foarte detaliat si cu explicatii tehnice toate informatiile din fisierul PDF-atasat, inclusiv cu sursa si autori: {chat.FileName}.";
+                }
             }
 
             // Apelăm serviciul AI pentru a obține răspunsul
@@ -102,6 +115,8 @@ namespace PDFReaderAI.Controllers
                 AIResponse = aiResponse
             });
         }
+
+
 
 
     }
