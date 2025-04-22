@@ -13,6 +13,14 @@ builder.Services.AddDbContext<ChatDbContext>(options =>
 options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IChatRepository, ChatRepository>();
+builder.Services.AddScoped<IChatAIService, ChatAIService>();
+builder.Services
+       .AddHttpClient<IChatAIService, ChatAIService>(client =>
+       {
+           client.BaseAddress = new Uri("http://localhost:11434");
+       });
+
+
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen(c =>

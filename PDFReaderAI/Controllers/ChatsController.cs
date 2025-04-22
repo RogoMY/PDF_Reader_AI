@@ -64,6 +64,47 @@ namespace PDFReaderAI.Controllers
             }
             return NoContent();
         }
+        [HttpPost("{id}/interact")]
+        public async Task<IActionResult> InteractWithAI(Guid id, [FromBody] string newPrompt, [FromServices] IChatAIService chatAIService)
+        {
+            // Obține chat-ul din baza de date
+            var chat = await chatRepository.GetChatByIdAsync(id);
+            if (chat == null)
+            {
+                return NotFound($"Chat with ID {id} not found.");
+            }
+
+            if (string.IsNullOrEmpty(newPrompt))
+            {
+                return BadRequest("The newPrompt field is required.");
+            }
+
+            // Apelăm serviciul AI pentru a obține răspunsul
+            var aiResponse = await chatAIService.GetResponseAsync(
+                chat.Prompts,
+                chat.Responses,
+                newPrompt,
+                chat.FileContent
+            );
+
+            // Actualizăm prompturile și răspunsurile în baza de date
+            var updated = await chatRepository.UpdateChatPromptsAndResponsesAsync(id, newPrompt, aiResponse);
+            if (!updated)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Failed to update chat with AI response.");
+            }
+
+            // Returnăm răspunsul AI-ului
+            return Ok(new
+            {
+                ChatId = id,
+                NewPrompt = newPrompt,
+                AIResponse = aiResponse
+            });
+        }
+
 
     }
+
 }
+

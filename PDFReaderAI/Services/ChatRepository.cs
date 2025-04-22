@@ -55,5 +55,28 @@ namespace PDFReaderAI.Services
             logger.LogInformation("Chat with id {Id} updated", chat.Id);
             return await context.SaveChangesAsync() > 0;
         }
+        public async Task<bool> UpdateChatPromptsAndResponsesAsync(Guid id, string newPrompt, string newResponse)
+        {
+            var chat = await context.Chats.FindAsync(id);
+            if (chat == null) return false;
+
+            // Initialize arrays if null
+            var prompts = chat.Prompts != null ? chat.Prompts.ToList() : new List<string>();
+            var responses = chat.Responses != null ? chat.Responses.ToList() : new List<string>();
+
+            // Append new entries
+            prompts.Add(newPrompt);
+            responses.Add(newResponse);
+
+            // Update model
+            chat.Prompts = prompts.ToArray();
+            chat.Responses = responses.ToArray();
+            chat.TimeOfDiscussion = DateTime.UtcNow;
+
+            context.Chats.Update(chat);
+            await context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

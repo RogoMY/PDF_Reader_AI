@@ -9,5 +9,7 @@ namespace PDFReaderAI.Services
         Task<Chat> AddChatAsync(Chat chat);
         Task<bool> DeleteChatAsync(Guid id);
         Task<bool> UpdateChatAsync(Chat chat);
+        Task<bool> UpdateChatPromptsAndResponsesAsync(Guid id, string newPrompt, string aiResponse);
+
     }
 }

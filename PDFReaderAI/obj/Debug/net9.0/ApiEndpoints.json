@@ -77,5 +77,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PDFReaderAI.Controllers.ChatsController",
+    "Method": "InteractWithAI",
+    "RelativePath": "api/Chats/{id}/interact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "newPrompt",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

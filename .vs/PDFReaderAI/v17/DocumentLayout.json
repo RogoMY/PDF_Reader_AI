@@ -1,7 +1,44 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\piton\\PDF_Reader_AI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\controllers\\chatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\controllers\\chatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\services\\chataiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\services\\chataiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\data\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\data\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\services\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\services\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\services\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\services\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\services\\pdfreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\services\\pdfreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\models\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\models\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|d:\\piton\\pdf_reader_ai\\pdfreaderai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E0635F-1D8B-46A2-AA9F-611945CA6E1B}|PDFReaderAI\\PDFReaderAI.csproj|solutionrelative:pdfreaderai\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 118,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +55,122 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChatDbContext.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Data\\ChatDbContext.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Data\\ChatDbContext.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Data\\ChatDbContext.cs",
+              "RelativeToolTip": "PDFReaderAI\\Data\\ChatDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T16:55:47.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IChatRepository.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\IChatRepository.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Services\\IChatRepository.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\IChatRepository.cs",
+              "RelativeToolTip": "PDFReaderAI\\Services\\IChatRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:41:16.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatRepository.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatRepository.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Services\\ChatRepository.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatRepository.cs",
+              "RelativeToolTip": "PDFReaderAI\\Services\\ChatRepository.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwFAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:39:34.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatAiService.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatAiService.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Services\\ChatAiService.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatAiService.cs",
+              "RelativeToolTip": "PDFReaderAI\\Services\\ChatAiService.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:39:14.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PdfReaderService.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\PdfReaderService.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Services\\PdfReaderService.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\PdfReaderService.cs",
+              "RelativeToolTip": "PDFReaderAI\\Services\\PdfReaderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:38:39.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatsController.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Controllers\\ChatsController.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Controllers\\ChatsController.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Controllers\\ChatsController.cs*",
+              "RelativeToolTip": "PDFReaderAI\\Controllers\\ChatsController.cs*",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:41:29.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Models\\SeedData.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Models\\SeedData.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Models\\SeedData.cs",
+              "RelativeToolTip": "PDFReaderAI\\Models\\SeedData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T16:55:45.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Models\\Chat.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Models\\Chat.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Models\\Chat.cs",
+              "RelativeToolTip": "PDFReaderAI\\Models\\Chat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:33:42.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Program.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Program.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Program.cs",
+              "RelativeToolTip": "PDFReaderAI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T17:41:09.14Z"
             }
           ]
         },
