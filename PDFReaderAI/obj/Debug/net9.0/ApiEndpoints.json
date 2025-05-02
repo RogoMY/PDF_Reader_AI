@@ -92,8 +92,8 @@
         "IsRequired": true
       },
       {
-        "Name": "newPrompt",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "AIInteractionRequest",
         "IsRequired": true
       }
     ],

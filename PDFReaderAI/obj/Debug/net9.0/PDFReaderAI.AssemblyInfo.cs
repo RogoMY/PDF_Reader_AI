@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDFReaderAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59ad36c3b88d83f4fdd336d3ea5b480ebf775cbf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee29559c77b81412b25437b4294d7c64d3a5e797")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDFReaderAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDFReaderAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

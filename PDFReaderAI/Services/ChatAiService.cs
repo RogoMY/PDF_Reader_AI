@@ -11,7 +11,7 @@ namespace PDFReaderAI.Services
 {
     public interface IChatAIService
     {
-        Task<string> GetResponseAsync(string[] prompts, string[] responses, string newPrompt, byte[]? fileContent = null);
+        Task<string> GetResponseAsync(string[] prompts, string[] responses, string newPrompt, byte[]? fileContent = null, string? aiModel=null);
     }
 
 
@@ -42,11 +42,11 @@ namespace PDFReaderAI.Services
         }
 
         public async Task<string> GetResponseAsync(
-          string[] prompts,
-          string[] responses,
-          string newPrompt,
-          byte[]? fileContent = null
-      )
+           string[] prompts,
+           string[] responses,
+           string newPrompt,
+           byte[]? fileContent = null,
+           string aiModel = "neural-chat")
         {
             // Asigură că prompts și responses au aceeași dimensiune
             if (prompts.Length != responses.Length)
@@ -77,7 +77,7 @@ namespace PDFReaderAI.Services
 
             var payload = new
             {
-                model = "neural-chat",
+                model = aiModel, // Folosim modelul specificat
                 messages = messages,
                 stream = false
             };
@@ -110,6 +110,7 @@ namespace PDFReaderAI.Services
 
             throw new InvalidOperationException("Invalid JSON structure: Missing 'message' or 'content'.");
         }
+
 
 
 

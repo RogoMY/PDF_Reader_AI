@@ -64,12 +64,19 @@ namespace PDFReaderAI.Controllers
             }
             return NoContent();
         }
+
         [HttpPost("{id}/interact")]
         public async Task<IActionResult> InteractWithAI(
            Guid id,
-           [FromBody] string newPrompt,
+           [FromBody] AIInteractionRequest request,
            [FromServices] IChatAIService chatAIService)
         {
+            // Validăm cererea
+            if (request == null || string.IsNullOrEmpty(request.AIModel) || string.IsNullOrEmpty(request.Prompt))
+            {
+                return BadRequest("Both AIModel and Prompt fields are required.");
+            }
+
             // Obține chat-ul din baza de date
             var chat = await chatRepository.GetChatByIdAsync(id);
             if (chat == null)
@@ -77,18 +84,26 @@ namespace PDFReaderAI.Controllers
                 return NotFound($"Chat with ID {id} not found.");
             }
 
-            if (string.IsNullOrEmpty(newPrompt))
-            {
-                return BadRequest("The newPrompt field is required.");
-            }
+            string newPrompt = request.Prompt;
 
-            // Verificăm dacă există un fișier PDF atașat și dacă promptul nu este un text simplu
-            if (chat.FileContent != null && chat.FileContent.Length > 0 && chat.FileMimeType == "application/pdf")
+            if (chat.FileContent != null && chat.FileContent.Length > 0)
             {
-                // Construim un prompt personalizat pentru AI doar dacă nu este un text simplu
-                if (string.IsNullOrWhiteSpace(newPrompt) || newPrompt.Equals("Te rog fa rezumatul la PDF-ul atasat", StringComparison.OrdinalIgnoreCase))
+                switch (chat.FileMimeType)
                 {
-                    newPrompt = $"Te rog sa imi rezumi foarte detaliat si cu explicatii tehnice toate informatiile din fisierul PDF-atasat, inclusiv cu sursa si autori: {chat.FileName}.";
+                    case "application/pdf":
+                        newPrompt = $"Te rog sa imi rezumi foarte detaliat si cu explicatii tehnice toate informatiile din fisierul PDF atasat, inclusiv cu sursa si autori: {chat.FileName}.";
+                        break;
+
+                    case "image/jpeg":
+                        newPrompt = $"Te rog sa analizezi imaginea JPEG atasata ({chat.FileName}) si sa imi oferi o descriere detaliata a continutului acesteia.";
+                        break;
+                 
+                    case "text/plain":
+                        newPrompt = $"Te rog sa analizezi fisierul TXT atasat ({chat.FileName}) si sa imi oferi un rezumat detaliat al continutului acestuia.";
+                        break;
+
+                    default:
+                        return BadRequest($"Unsupported file type: {chat.FileMimeType}.");
                 }
             }
 
@@ -97,7 +112,8 @@ namespace PDFReaderAI.Controllers
                 chat.Prompts,
                 chat.Responses,
                 newPrompt,
-                chat.FileContent
+                chat.FileContent,
+                request.AIModel
             );
 
             // Actualizăm prompturile și răspunsurile în baza de date
@@ -115,6 +131,8 @@ namespace PDFReaderAI.Controllers
                 AIResponse = aiResponse
             });
         }
+
+
 
 
 
