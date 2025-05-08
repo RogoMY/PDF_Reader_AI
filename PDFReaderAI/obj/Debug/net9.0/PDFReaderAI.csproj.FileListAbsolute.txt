@@ -359,3 +359,9 @@ D:\piton\PDF_Reader_AI\PDFReaderAI\obj\Debug\net9.0\refint\PDFReaderAI.dll
 D:\piton\PDF_Reader_AI\PDFReaderAI\obj\Debug\net9.0\PDFReaderAI.pdb
 D:\piton\PDF_Reader_AI\PDFReaderAI\obj\Debug\net9.0\PDFReaderAI.genruntimeconfig.cache
 D:\piton\PDF_Reader_AI\PDFReaderAI\obj\Debug\net9.0\ref\PDFReaderAI.dll
+D:\piton\PDF_Reader_AI\PDFReaderAI\bin\Debug\net9.0\pdf-reader\angular.json
+D:\piton\PDF_Reader_AI\PDFReaderAI\bin\Debug\net9.0\pdf-reader\package-lock.json
+D:\piton\PDF_Reader_AI\PDFReaderAI\bin\Debug\net9.0\pdf-reader\package.json
+D:\piton\PDF_Reader_AI\PDFReaderAI\bin\Debug\net9.0\pdf-reader\tsconfig.app.json
+D:\piton\PDF_Reader_AI\PDFReaderAI\bin\Debug\net9.0\pdf-reader\tsconfig.json
+D:\piton\PDF_Reader_AI\PDFReaderAI\bin\Debug\net9.0\pdf-reader\tsconfig.spec.json

@@ -1,0 +1,14 @@
+<div class="sidebar">
+  <h2>Chat-uri</h2>
+  <ul class="chat-list">
+    <li class="chat-item" *ngFor="let chat of chats">
+      <a 
+        [routerLink]="['/chat', chat.id]" 
+        title="{{ chat.Title }}"
+        class="chat-link"
+      >
+        <div class="chat-title">{{ chat.Title }}</div>
+      </a>
+    </li>
+  </ul>
+</div>
