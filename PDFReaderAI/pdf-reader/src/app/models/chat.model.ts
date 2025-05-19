@@ -1,13 +1,11 @@
 export interface Chat {
     id?: string;
-    Title: string;
-    Prompts: string[];
-    Responses: string[];
-    timeOfDiscussion: Date;
-    FileName: string;
-    FileContent: Uint8Array;
-    FileMimeType: string;
-    FileBase64Content?: string;
-
-
+    title: string;
+    prompts: string[];
+    responses: string[];
+    timeOfDiscussion: Date | string;
+    fileName?: string | null;
+    fileContent?: Uint8Array | null;
+    fileMimeType?: string | null;
+    fileBase64Content?: string;
 }

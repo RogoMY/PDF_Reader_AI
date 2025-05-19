@@ -10,9 +10,12 @@ import { throwError } from 'rxjs';
 })
 export class ChatService {
 
+
   private apiURL = 'http://localhost:5075/api/Chats';
   constructor(private http: HttpClient) {}
-
+ interactWithChat(chatId: string, payload: { aiModel: string, prompt: string }) {
+  return this.http.post(`${this.apiURL}/${chatId}/interact`, payload);
+}
   public getChats() : Observable<Chat[]> {
     return this.http.get<Chat[]>(this.apiURL).pipe(catchError(this.handleError));
   }

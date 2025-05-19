@@ -1,0 +1,32 @@
+<div class="chat-container" *ngIf="chat; else loading">
+  <div class="chat-header">
+    <h2>{{ chat.title }}</h2>
+  </div>
+  <div class="chat-messages">
+    <ng-container *ngFor="let prompt of chat.prompts; let i = index">
+      <div class="chat-bubble user">
+        <span class="sender">Tu</span>
+        <span class="bubble-text">{{ prompt }}</span>
+      </div>
+      <div class="chat-bubble ai" *ngIf="chat.responses[i]">
+        <span class="sender">AI</span>
+        <span class="bubble-text">{{ chat.responses[i] }}</span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="chat-input-row">
+    <input
+      type="text"
+      [(ngModel)]="newPrompt"
+      placeholder="Scrie un mesaj..."
+      class="chat-input"
+      (keyup.enter)="sendPrompt()"
+    />
+    <button class="send-btn" (click)="sendPrompt()">
+      <span>&#8594;</span>
+    </button>
+  </div>
+</div>
+<ng-template #loading>
+  <p>Se încarcă chatul...</p>
+</ng-template>

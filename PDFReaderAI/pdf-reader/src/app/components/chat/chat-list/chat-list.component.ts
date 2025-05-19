@@ -3,11 +3,13 @@ import { Router, RouterModule } from '@angular/router';
 import { ChatService } from '../../../services/chat.service';
 import { Chat } from '../../../models/chat.model';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-chat-list',
+  standalone: true, // Adaugă această linie
   imports: [RouterModule, CommonModule],
   templateUrl: './chat-list.component.html',
-  styleUrl: './chat-list.component.css'
+  styleUrls: ['./chat-list.component.css'] // corect: styleUrls (nu styleUrl)
 })
 export class ChatListComponent implements OnInit {
   chats: Chat[] = [];
@@ -17,4 +19,7 @@ export class ChatListComponent implements OnInit {
       this.chats = data;
     });
   }
+goToChat(id: string | undefined) {
+  this.router.navigate(['/chat', id]);
+}
 }

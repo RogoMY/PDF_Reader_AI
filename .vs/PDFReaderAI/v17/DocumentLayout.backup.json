@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 118,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -75,18 +75,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChatRepository.cs",
-              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatRepository.cs",
-              "RelativeDocumentMoniker": "PDFReaderAI\\Services\\ChatRepository.cs",
-              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatRepository.cs",
-              "RelativeToolTip": "PDFReaderAI\\Services\\ChatRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAIAwwBQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:39:34.324Z"
             },
             {
               "$type": "Document",
@@ -134,8 +122,7 @@
               "RelativeToolTip": "PDFReaderAI\\Models\\Chat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:33:42.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T14:33:42.834Z"
             },
             {
               "$type": "Document",
@@ -171,8 +158,7 @@
               "RelativeToolTip": "PDFReaderAI\\Controllers\\ChatsController.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAGQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:41:29.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T14:41:29.563Z"
             },
             {
               "$type": "Document",
@@ -194,10 +180,22 @@
               "RelativeDocumentMoniker": "PDFReaderAI\\Program.cs",
               "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Program.cs",
               "RelativeToolTip": "PDFReaderAI\\Program.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAIwDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T17:41:09.14Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatRepository.cs",
+              "DocumentMoniker": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatRepository.cs",
+              "RelativeDocumentMoniker": "PDFReaderAI\\Services\\ChatRepository.cs",
+              "ToolTip": "D:\\piton\\PDF_Reader_AI\\PDFReaderAI\\Services\\ChatRepository.cs",
+              "RelativeToolTip": "PDFReaderAI\\Services\\ChatRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAIAwwBQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:39:34.324Z"
             },
             {
               "$type": "Document",

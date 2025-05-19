@@ -1,14 +1,38 @@
 <div class="sidebar">
-  <h2>Chat-uri</h2>
-  <ul class="chat-list">
-    <li class="chat-item" *ngFor="let chat of chats">
-      <a 
-        [routerLink]="['/chat', chat.id]" 
-        title="{{ chat.Title }}"
-        class="chat-link"
-      >
-        <div class="chat-title">{{ chat.Title }}</div>
-      </a>
-    </li>
-  </ul>
+  <div class="sidebar-header">
+    <h2>Chat-uri</h2>
+    <button class="new-chat-btn">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  
+  <div class="search-container">
+    <input type="text" placeholder="Caută conversații..." class="search-input">
+  </div>
+  
+  <div class="sidebar-content">
+    <ul class="chat-list">
+      <li class="chat-item" *ngFor="let chat of chats">
+        <a [routerLink]="['/chat', chat.id]" title="{{ chat.title }}" class="chat-link">
+          <div class="chat-avatar">
+            <span>{{ chat.title.charAt(0) }}</span>
+          </div>
+          <div class="chat-info">
+            <div class="chat-title">{{ chat.title }}</div>            
+          </div>
+
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="sidebar-footer">
+    <div class="user-profile">
+      <div class="user-avatar">U</div>
+      <div class="user-name">Utilizator</div>
+    </div>
+    <button class="settings-btn">
+      <i class="fa fa-cog"></i>
+    </button>
+  </div>
 </div>
