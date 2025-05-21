@@ -1,32 +1,60 @@
-<div class="chat-container" *ngIf="chat; else loading">
-  <div class="chat-header">
-    <h2>{{ chat.title }}</h2>
-  </div>
-  <div class="chat-messages">
-    <ng-container *ngFor="let prompt of chat.prompts; let i = index">
-      <div class="chat-bubble user">
-        <span class="sender">Tu</span>
-        <span class="bubble-text">{{ prompt }}</span>
+<div class="chat-layout" style="display:flex;height:100vh;width:100%;">
+
+  <!-- Sidebar = chat-list component -->
+  <aside class="sidebar">
+    <app-chat-list></app-chat-list>
+  </aside>
+
+  <!-- Main chat section -->
+  <section class="chat-container" *ngIf="chat; else loading">
+    <header class="chat-header">
+      <h2>{{ chat.title }}</h2>
+      <div class="model-selector">
+        <label for="modelSelect">Model AI:</label>
+        <select id="modelSelect" [(ngModel)]="selectedModel">
+          <option *ngFor="let m of modelOptions" [value]="m">{{ m }}</option>
+        </select>
       </div>
-      <div class="chat-bubble ai" *ngIf="chat.responses[i]">
-        <span class="sender">AI</span>
-        <span class="bubble-text">{{ chat.responses[i] }}</span>
-      </div>
-    </ng-container>
-  </div>
-  <div class="chat-input-row">
-    <input
-      type="text"
-      [(ngModel)]="newPrompt"
-      placeholder="Scrie un mesaj..."
-      class="chat-input"
-      (keyup.enter)="sendPrompt()"
-    />
-    <button class="send-btn" (click)="sendPrompt()">
-      <span>&#8594;</span>
-    </button>
-  </div>
+    </header>
+
+    <div class="chat-messages">
+      <ng-container *ngFor="let prompt of chat.prompts; let i = index">
+        <div class="chat-bubble user">
+          <span class="sender">Tu</span>
+          <span class="bubble-text">{{ prompt }}</span>
+        </div>
+        <div class="chat-bubble ai" *ngIf="chat.responses[i]">
+          <span class="sender">AI</span>
+          <span class="bubble-text">{{ chat.responses[i] }}</span>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="chat-input-row">
+      <input
+        class="chat-input"
+        type="text"
+        placeholder="Scrie un mesaj..."
+        [(ngModel)]="newPrompt"
+        (keyup.enter)="sendPrompt()"
+      />
+      
+      <!-- Attach file button -->
+      <label class="attach-btn" title="Atașează fișier">
+        <input
+          type="file"
+          accept=".pdf,image/jpeg,text/plain"
+          (change)="attachFile($event)"
+          hidden
+        />
+        <i class="fa fa-paperclip"></i>
+      </label>
+
+      <button class="send-btn" (click)="sendPrompt()">&#8594;</button>
+    </div>
+  </section>
 </div>
+
 <ng-template #loading>
   <p>Se încarcă chatul...</p>
 </ng-template>

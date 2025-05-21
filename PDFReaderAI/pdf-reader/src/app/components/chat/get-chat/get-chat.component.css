@@ -100,3 +100,22 @@
 .send-btn:hover {
   background: #1565c0;
 }
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.model-selector {
+  display: flex;
+  align-items: center;
+}
+
+.model-selector label {
+  margin-right: 0.5rem;
+}
+
+.model-selector select {
+  padding: 0.25rem;
+  border-radius: 4px;
+}

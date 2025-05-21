@@ -22,9 +22,10 @@ export class ChatService {
   public getChat(id: string) : Observable<Chat> {
     return this.http.get<Chat>(`${this.apiURL}/${id}`);
   }
-  public createChat(chat: Chat) : Observable<Chat> {
-    return this.http.post<Chat>(this.apiURL, chat);
-  }
+createChat(chat: Partial<Chat>) {
+  return this.http.post<Chat>(`${this.apiURL}`, chat);
+}
+
   public changeChatModel(id : string, chat:Chat): Observable<Chat> {
     return this.http.put<Chat>(`${this.apiURL}/${id}`, chat);
   }
@@ -35,6 +36,9 @@ export class ChatService {
     const formData = new FormData();
     formData.append('file', file, file.name);
     return this.http.post(`${this.apiURL}/upload/${chatId}`, formData);
+  }
+  public updateChat(chatId: string, chat: Partial<Chat>): Observable<Chat> {
+    return this.http.put<Chat>(`${this.apiURL}/${chatId}`, chat);
   }
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
